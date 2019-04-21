@@ -1,0 +1,167 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5881,        159]
+NotebookOptionsPosition[      5211,        142]
+NotebookOutlinePosition[      5554,        157]
+CellTagsIndexPosition[      5511,        154]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"A", "[", "d", "]"}], "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"\"\<EigenValue.txt\>\"", ",", "\"\<Table\>\""}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.76472949844195*^9, 3.764729524136776*^9}, {
+  3.7647295767527733`*^9, 3.7647295776169286`*^9}, {3.764729946240895*^9, 
+  3.7647299829424353`*^9}, {3.7647300500082507`*^9, 3.764730050312529*^9}, {
+  3.764848164568493*^9, 
+  3.764848166312934*^9}},ExpressionUUID->"d95ac9e5-b274-4a20-8249-\
+ac3428be9827"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"MainDirectory1", "=", 
+   RowBox[{"$HomeDirectory", "<>", "\"\<\\\\Documents\>\""}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"MainDirectory2", "=", "\"\<HELICNODE-APR19-3\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"MainDirectory", "=", 
+   RowBox[{"MainDirectory1", "<>", "\"\<\\\\\>\"", "<>", "MainDirectory2"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SetDirectory", "[", "MainDirectory", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"TolFlod", "=", 
+  RowBox[{
+   RowBox[{"Dimensions", "[", 
+    RowBox[{"FileNames", "[", "]"}], "]"}], "[", 
+   RowBox[{"[", "1", "]"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Flod", "[", "i", "]"}], "=", 
+    RowBox[{
+     RowBox[{"FileNames", "[", "]"}], "[", 
+     RowBox[{"[", "i", "]"}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "1", ",", "TolFlod"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.7567926850176744`*^9, 3.756792694294896*^9}, {
+   3.756793507788799*^9, 3.756793508154475*^9}, {3.7567937294828367`*^9, 
+   3.7567937387261305`*^9}, {3.7567939664223213`*^9, 
+   3.7567939838476534`*^9}, {3.756794100174921*^9, 3.7567941121307216`*^9}, {
+   3.7573075685274925`*^9, 3.757307574864585*^9}, 3.75730881706777*^9, 
+   3.7610153998457594`*^9, {3.761213594570252*^9, 3.761213596147581*^9}, {
+   3.761340940752016*^9, 3.761340967117259*^9}, {3.764707976920639*^9, 
+   3.7647079952201366`*^9}, {3.7647301311462955`*^9, 3.764730131558228*^9}, {
+   3.7647611498408775`*^9, 3.7647611499324875`*^9}, {3.7648482783028545`*^9, 
+   3.7648482889793015`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"10e94368-858d-4ac1-8c44-3239f74e549c"],
+
+Cell[BoxData[
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"M", "[", "d", "]"}], "=", 
+      RowBox[{"Import", "[", 
+       RowBox[{
+        RowBox[{"MainDirectory", "<>", "\"\<\\\\\>\"", "<>", 
+         RowBox[{"Flod", "[", "d", "]"}], "<>", 
+         "\"\<\\\\EigenValue.txt\>\""}], ",", "\"\<Table\>\""}], "]"}]}], ",",
+      "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"M1", "[", "d", "]"}], "=", 
+      RowBox[{
+       RowBox[{"M", "[", "d", "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"1", ",", "5"}], "]"}], "]"}]}], ",", 
+     RowBox[{
+      RowBox[{"M2", "[", "d", "]"}], "=", 
+      RowBox[{
+       RowBox[{"M", "[", "d", "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"2", ",", "5"}], "]"}], "]"}]}], ",", 
+     RowBox[{
+      RowBox[{"M3", "[", "d", "]"}], "=", 
+      RowBox[{
+       RowBox[{"M", "[", "d", "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"3", ",", "5"}], "]"}], "]"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d", ",", "1", ",", "TolFlod"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7566935485430503`*^9, 3.756693557409884*^9}, {
+  3.756693615897862*^9, 3.756693616236221*^9}, {3.7647150453813906`*^9, 
+  3.764715127061944*^9}, {3.764715158310176*^9, 3.7647151584380474`*^9}, {
+  3.76473016531571*^9, 3.7647302758005514`*^9}, {3.764730341975027*^9, 
+  3.7647303460857444`*^9}, {3.764730398928442*^9, 3.764730401492152*^9}, {
+  3.7648484189331646`*^9, 
+  3.7648484299737167`*^9}},ExpressionUUID->"6b3ac745-5b6b-4742-860f-\
+d23dd4e69ccb"],
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<AllEigen.xls\>\"", ",", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Flod", "[", "i", "]"}], ",", 
+       RowBox[{"M1", "[", "i", "]"}], ",", 
+       RowBox[{"M2", "[", "i", "]"}], ",", 
+       RowBox[{"M3", "[", "i", "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "TolFlod"}], "}"}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.7647304068144827`*^9, 3.764730439713879*^9}, {
+   3.764730490778751*^9, 3.764730506704578*^9}, {3.7647611615681095`*^9, 
+   3.764761162047942*^9}, 
+   3.764848408580737*^9},ExpressionUUID->"f1269b54-8c2f-4037-be61-\
+356e4dbc8c9b"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.7648516048677697`*^9},ExpressionUUID->"270fcd80-578b-4348-bba3-\
+b2ebd06f2256"]
+},
+WindowSize->{1368, 829},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 517, 12, 28, "Input",ExpressionUUID->"d95ac9e5-b274-4a20-8249-ac3428be9827"],
+Cell[1078, 34, 1733, 39, 124, "Input",ExpressionUUID->"10e94368-858d-4ac1-8c44-3239f74e549c"],
+Cell[2814, 75, 1543, 40, 48, "Input",ExpressionUUID->"6b3ac745-5b6b-4742-860f-d23dd4e69ccb"],
+Cell[4360, 117, 695, 18, 28, "Input",ExpressionUUID->"f1269b54-8c2f-4037-be61-356e4dbc8c9b"],
+Cell[5058, 137, 149, 3, 48, "Input",ExpressionUUID->"270fcd80-578b-4348-bba3-b2ebd06f2256"]
+}
+]
+*)
+
